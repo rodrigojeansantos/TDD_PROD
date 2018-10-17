@@ -1,0 +1,48 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "One Paragraph of project description goes here",
+  "main": "index.js",
+  "scripts": {
+    "prepush": "npm run test:coverage",    
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 90,
+    "statements": 90,
+    "functions": 90,
+    "branches": 90,
+    "reporter": ["text","html"],
+    "exclude": ["tests/**"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigojeansantos/TDD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigojeansantos/TDD/issues"
+  },
+  "homepage": "https://github.com/rodrigojeansantos/TDD#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  },
+  "dependencies": {},
+  "directories": {
+    "test": "tests"
+  }
+}

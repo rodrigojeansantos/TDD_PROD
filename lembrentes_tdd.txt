@@ -1,0 +1,83 @@
+------------------------Configuração---------------------------
+npm i gitignore -g
+gitignore -types   mostra todas as coisas que podemos ter
+gitignore Node ele ja coloca tudo que não podemos enviar
+---------------------------------------------------------------
+
+--------------------------README-------------------------------
+touch README.MD
+https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+---------------------------------------------------------------
+
+-------------------------StyleGuides---------------------------
+ESLint mais usado.
+npm i eslint --save-dev ou npm install -g eslint
+./node_modules/.bin/eslint --init   chamando ele 
+./node_modules/.bin/eslint src/*.js validando todos os arquivos
+ou eslint src/*.js ou npm rum lint
+---------------------------------------------------------------
+
+-------------------------Husky---------------------------
+Executam antes de algum comando, pode ser após tb.
+
+pre-commit: Fazer algo antes do commit
+pre-push: Se deu certo, teste.
+---------------------------------------------------------------
+
+----------------------------Testes-----------------------------
+mocks: metodos falsos (similar aos spies e stud) ideal para
+um elemento falso, modificar tudo. multiplos comportamento
+Replicar algumas coisas do bd sem usar bd.
+
+spies: Vigiar informações, metodos, respostas. Callbacks
+
+stubs: substituim a funçã, troca comportamento. Forçar uma
+exceção, pular uma execução do bd. Simplifica teste assincrosno
+
+Chai: bdd, tdd. Mais completo. Responsavel por cada
+each
+
+fizzbuzz:
+
+                         **Rodando**
+no arquivo package.json colar
+"test": "./node_modules/.bin/mocha tests/**/*.spec.js"
+npm test
+	             **Resporters**
+npm test -- --reporters
+npm test -- --reporter=nyan     azul qtos teste pulou
+verde ok vermelho problemo.
+
+		**fail fast**
+Para no primeiro teste e quebra
+npm test -- --bail
+
+
+---------------------------------------------------------------
+
+-------------------------Code Coverage-------------------------
+Analisa todos os pedaços do seus teste. Analise se alguma
+parte do codigo não foi testado. Lembrar de criar no
+package.json
+npm i --save-dev nyc
+Colunas gerada do nyc: 
+ stmts: São linhas que estou rodando e testando
+ Branch: If e else se esta pegando
+ Funcs: Retorno das funções
+ Lines: Qtde de todas as linhas que estou cobrindo
+
+Criar no packge o nyc e deixar como abaixo.
+  "nyc": {
+    "reporter": ["text","html"],
+    "exclude": ["tests/**"]
+  },
+
+Consigo descobrir o quanto estou cobrindo do codigo.
+Gera tb uma pasta para analsiar algumas coisas.
+Posso colocar uma trava para subir o codigo, quero 80%
+
+---------------------------------------------------------------
+
+---------------------------Producao----------------------------
+
+---------------------------------------------------------------
