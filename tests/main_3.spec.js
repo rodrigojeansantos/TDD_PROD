@@ -1,10 +1,4 @@
-/*
-Desafio FizzBuzz
-Se o numero for divisivel por 3, no lugar do numero escrevo 'Fizz'
-Se o numero for divisivel por 5, no lugar do numero escrevo 'Buzz'
-Se o numero for divisivel por 3 e 5, no lugar do numero escreva 'FizzBuzz'
-Se não for multiplo de nada, retorna o numero
-*/
+
 
 import { expect } from 'chai'
 import FizzBuzz from '../src/buzz'
