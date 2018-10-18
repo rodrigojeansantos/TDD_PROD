@@ -1,8 +1,9 @@
+export const search = ( query, type ) => fetch(`https://api.spotify.com/v1/search?q=${query}&type=${type}`)
 
-    const sum = (num1, num2) => num1+num2
-    const sub = (num1, num2) => num1-num2
-    const mult = (num1, num2) => num1*num2
-    
-    const div = (num1, num2) => (num2 === 0) ? 'Não é possivel dividir por 0' : num1/num2
-    
-export { sum, sub, mult, div }
+export const searchAlbuns = () => {}
+
+export const searchArtists = () => {}
+
+export const searchTracks = () => {}
+
+export const searchPlaylists = () => {}

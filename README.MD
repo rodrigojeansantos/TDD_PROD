@@ -1,12 +1,12 @@
 # Project Title
 
-One Paragraph of project description goes here
+Estudos de testes usando API spotify
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Prerequisities
 
 What things you need to install the software and how to install them
 
@@ -16,7 +16,7 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you have to get a development env running
 
 Say what the step will be
 
@@ -58,9 +58,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* Dropwizard - Bla bla bla
+* Maven - Maybe
+* Atom - ergaerga
 
 ## Contributing
 
@@ -82,6 +82,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
+* Hat tip to anyone who's code was used
 * Inspiration
 * etc

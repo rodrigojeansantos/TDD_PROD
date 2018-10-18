@@ -1,48 +1,62 @@
 {
-  "name": "tdd",
+  "name": "js-tdd-course",
   "version": "1.0.0",
-  "description": "One Paragraph of project description goes here",
+  "description": "Teste API",
   "main": "index.js",
   "scripts": {
-    "prepush": "npm run test:coverage",    
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
-    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "clear": "rimraf lib",
+    "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
+    "build:watch": "npm run build -- --watch",
+    "lint": "eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "mocha tests/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
-    "check-coverage": true,
-  
-    "lines": 88,
-    "statements": 88,
-    "functions": 88,
-    "branches": 88,
-    "reporter": ["text","html"],
-    "exclude": ["tests/**"]
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rodrigojeansantos/TDD.git"
+    "url": "git+https://github.com/rodrigojeansantos/TDD_PROD.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rodrigojeansantos/TDD/issues"
-  },
-  "homepage": "https://github.com/rodrigojeansantos/TDD#readme",
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "rodrigojs",
+  "license": "MIT",
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
-    "chai": "^4.2.0",
-    "eslint": "^5.7.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "husky": "^1.1.2",
-    "mocha": "^5.2.0",
-    "nyc": "^13.1.0"
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.3.2",
+    "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.1",
+    "husky": "^0.11.9",
+    "mocha": "^3.2.0",
+    "node-fetch": "^2.2.0",
+    "nyc": "^10.2.0",
+    "rimraf": "^2.6.1",
+    "sinon": "^7.0.0",
+    "sinon-chai": "^3.2.0",
+    "sinon-promise": "^0.1.3",
+    "sinon-stub-promise": "^4.0.0"
   },
-  "dependencies": {},
   "directories": {
     "test": "tests"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/rodrigojeansantos/TDD_PROD/issues"
+  },
+  "homepage": "https://github.com/rodrigojeansantos/TDD_PROD#readme",
+  "dependencies": {}
 }
